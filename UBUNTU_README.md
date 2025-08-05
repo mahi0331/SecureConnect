@@ -1,25 +1,45 @@
-# SecureConnect VPN - Ubuntu Installation Guide
+# SecureConnect VPN - Complete Setup Guide
 
-Welcome to SecureConnect VPN! This guide is specifically for Ubuntu users who want to get a VPN server running quickly and securely.
+Welcome to SecureConnect VPN! This comprehensive guide will help you set up a fully functional VPN server with Windows, mobile, and IP tracking support.
 
-## 🚀 Quick Ubuntu Setup
+## 🎯 What You'll Get After Setup
 
-You've got three ways to set up SecureConnect VPN on Ubuntu:
+✅ **Working VPN on Windows** - Native Windows 10/11 VPN client support  
+✅ **Working VPN on Mobile** - iOS and Android compatibility  
+✅ **IP Address Tracking** - Admin dashboard shows all connected device IPs  
+✅ **Real-time Monitoring** - See who's connected and when  
+✅ **Two-Factor Authentication** - Secure OTP-based login  
 
-### Method 1: Ubuntu-Optimized (Recommended) ⭐
+## 🚀 Complete Ubuntu Setup (All-in-One)
+
+### Method 1: Complete Automated Setup (Recommended) ⭐
 ```bash
-# Update your Ubuntu system
+# Step 1: Update your Ubuntu system
 sudo apt update && sudo apt upgrade -y
 
-# Navigate to the project directory
-cd ~/OneDrive/Desktop/Wifisec  # Adjust path as needed
+# Step 2: Navigate to the project directory
+cd ~/Desktop/Wifisec  # Or wherever you have the project
 
-# Run Ubuntu-optimized setup
-sudo ./scripts/ubuntu_setup.sh
+# Step 3: Make all scripts executable
+chmod +x scripts/*.sh client/scripts/*.sh
 
-# Verify everything works
-./scripts/ubuntu_verify.sh
+# Step 4: Run the complete setup (this installs everything)
+sudo ./scripts/complete_setup.sh
+
+# Step 5: Verify everything works
+./scripts/verify_complete.sh
+
+# Step 6: Get your server IP for clients
+hostname -I
 ```
+
+**What this installs:**
+- ✅ StrongSwan VPN with proper Windows/Mobile support
+- ✅ Python OTP system with enhanced security
+- ✅ Flask dashboard with IP tracking
+- ✅ Automatic certificate generation
+- ✅ Firewall configuration
+- ✅ User management system
 
 ### Method 2: Standard Setup
 ```bash
@@ -32,18 +52,17 @@ cd ~/OneDrive/Desktop/Wifisec
 # Make scripts executable
 chmod +x scripts/*.sh
 
-# Run standard setup
-sudo ./scripts/setup.sh
+# Run complete setup
+sudo ./scripts/complete_setup.sh
 
-# Start and verify
-sudo ./scripts/start_server.sh
-sudo ./scripts/verify_installation.sh
+# Verify installation
+sudo ./scripts/verify_complete.sh
 ```
 
 ### Method 3: One-Liner (Future Release)
 ```bash
 # This will be available when project is on GitHub
-curl -sSL https://raw.githubusercontent.com/user/secureconnect/main/scripts/ubuntu_setup.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/user/secureconnect/main/scripts/complete_setup.sh | sudo bash
 ```
 
 ## 🎯 What Gets Installed

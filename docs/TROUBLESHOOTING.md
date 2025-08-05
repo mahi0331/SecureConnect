@@ -11,7 +11,7 @@ chmod +x scripts/*.sh
 chmod +x client/scripts/*.sh
 
 # Run with proper permissions
-sudo ./scripts/setup.sh
+sudo ./scripts/complete_setup.sh
 ```
 
 #### Problem: Package installation fails
@@ -321,7 +321,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Run setup script again
-sudo ./scripts/setup.sh
+sudo ./scripts/complete_setup.sh
 ```
 
 ### Minimal Working Configuration
@@ -360,14 +360,14 @@ sudo systemctl restart strongswan
 ## 📞 **Getting Help**
 
 ### Check Documentation
-- [Complete Setup Guide](../QUICK_START.md)
+- [Complete Setup Guide](../UBUNTU_README.md)
 - [User Guide](USER_GUIDE.md)
 - [Configuration Reference](CONFIGURATION.md)
 
 ### Run Verification Script
 ```bash
 # Check installation status
-sudo ./scripts/verify_installation.sh
+sudo ./scripts/verify_complete.sh
 ```
 
 ### Collect Debug Information

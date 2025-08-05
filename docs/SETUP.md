@@ -30,12 +30,12 @@ This guide will walk you through setting up SecureConnect, an educational VPN sy
 
 2. **Run the setup script**:
    ```bash
-   sudo ./scripts/setup.sh
+   sudo ./scripts/complete_setup.sh
    ```
 
-3. **Start the server**:
+3. **Verify the installation**:
    ```bash
-   sudo ./scripts/start_server.sh
+   sudo ./scripts/verify_complete.sh
    ```
 
 4. **Access the dashboard**:
